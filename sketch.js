@@ -52,7 +52,7 @@ function draw(){
     
         noStroke();
         textSize(35)
-        fill("white")
+        fill("cyan");
         text("Score  " + score, width-300, 50)
     
     Engine.update(engine);
@@ -94,6 +94,7 @@ function mouseReleased(){
 
 function keyPressed(){
     if(keyCode === 32){
+       Matter.Body.setPosition(bird.body, {x : 200, y : 50});
        slingshot.attach(bird.body);
     }
 }
